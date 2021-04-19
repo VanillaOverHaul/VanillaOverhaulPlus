@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "vanillaoverhaulplus",
+  "version": "${version}",
+  "name": "VanillaOverhaulPlus",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "website": "https://github.com/VanillaOverHaul",
+    "repo": "https://github.com/VanillaOverHaul"
+  },
+  "license": "MIT",
+  "icon": "assets/vanillaoverhaulplus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.vanillaoverhaulplus.client.VanillaOverhaulPlusClient"
+    ],
+    "main": [
+      "io.github.vanillaoverhaulplus.VanillaOverhaulPlus"
+    ]
+  },
+  "mixins": [
+    "VanillaOverhaulPlus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17-alpha.21.15.a"
+  }
+}
