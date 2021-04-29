@@ -7,5 +7,6 @@ public class VanillaOverhaulPlus implements ModInitializer {
 	@Override
 	public void onInitialize () {
 		RegistryHelper.initializeRegistries();
+		Fluids.registerFluids();
 	}
 }
