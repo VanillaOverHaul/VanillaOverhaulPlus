@@ -5,6 +5,5 @@ public class RegistryHelper {
 
 	public static void initializeRegistries() {
 		RegistryEntity.initializeEntities();
-		Fluids.registerFluids();
 	}
 }
