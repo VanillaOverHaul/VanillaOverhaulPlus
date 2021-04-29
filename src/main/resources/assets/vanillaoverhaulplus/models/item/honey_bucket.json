@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "vanillaoverhaulplus:items/honey_bucket"
+  }
+}
