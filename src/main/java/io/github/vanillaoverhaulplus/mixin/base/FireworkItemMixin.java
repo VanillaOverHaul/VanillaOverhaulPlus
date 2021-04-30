@@ -32,11 +32,10 @@ public abstract class FireworkItemMixin extends Item {
 
 	@Inject(at = @At("TAIL"), method = "use")
 	public void use (World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
-		Random random = new Random();
 		if (!world.isClient) {
 			if (user.getVehicle() instanceof PigEntity) {
 				if (user.getStackInHand(hand).getItem().equals(this) && user.getEquippedStack(EquipmentSlot.CHEST).getItem() instanceof ElytraItem) {
-					if (random.nextInt(10) == 3) {
+					if (user.getVehicle().isOnGround()) {
 						Vec3d velocity = user.getVehicle().getVelocity();
 						user.getVehicle().setVelocity(velocity.getX(), 2.0F, velocity.getZ());
 						((PlayerEntityInterface) user).setHasReceivedPigsFlyAchievement(true);
